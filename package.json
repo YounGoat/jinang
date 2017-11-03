@@ -1,0 +1,30 @@
+{
+    "bin": {},
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "^3.3.0"
+    },
+    "directories": {},
+    "scripts": {
+        "test": "mocha"
+    },
+    "name": "jinang",
+    "version": "0.0.1",
+    "main": "index.js",
+    "keywords": [
+        "array",
+        "object",
+        "string"
+    ],
+    "homepage": "https://github.com/YounGoat/jinang",
+    "description": "Collection of Node.js / ECMAScript Gists",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YounGoat/jinang.git"
+    },
+    "author": {
+        "name": "YounGoat",
+        "email": "youngoat@163.com",
+        "url": "https://youngoat.github.io"
+    }
+}
