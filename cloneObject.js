@@ -7,7 +7,6 @@ const MODULE_REQUIRE = 1
     
     /* in-package */
     ;
-
     
 /**
  * Iterate the source object and create a new one.
