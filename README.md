@@ -43,6 +43,7 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [jointString](#jointstring)
 *   [modifyUrl](#modifyurl)
 *   [papply](#papply)
+*   [sleep](#sleep)
 
 ### cloneObject
 
@@ -163,6 +164,27 @@ Read more about *partial application*:
 *   [Curry or Partial Application? The Difference Between Partial Application and Curry](https://medium.com/javascript-scene/curry-or-partial-application-8150044c78b8)
 *   StackOverflow.com, [What is the difference between currying and partial application?](https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application)
 *   2ality.com, [Currying versus partial application (with JavaScript code)](http://2ality.com/2011/09/currying-vs-part-eval.html)
+
+### sleep
+
+Make current process to "sleep" for a while.
+
+```javascript
+const sleep = require('jinang/sleep');
+
+// Block the current process for 2000 milliseconds (2 seconds).
+sleep(2000);
+```
+
+In `co(function*() { /* ... */ })` code block, `sleep.promise()` is recommended because it is more precise.
+```javascript
+const sleep = require('jinang/sleep');
+const co = require('co');
+
+co(function*() {
+    yield sleep.promise(2000);
+});
+```
 
 ##  Why *jinang*
 

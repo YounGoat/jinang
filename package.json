@@ -2,6 +2,8 @@
     "bin": {},
     "dependencies": {},
     "devDependencies": {
+        "co": "^4.6.0",
+        "noda": "^0.1.1",
         "mocha": "^3.3.0"
     },
     "directories": {},
@@ -9,12 +11,15 @@
         "test": "mocha"
     },
     "name": "jinang",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "index.js",
     "keywords": [
         "array",
         "object",
-        "string"
+        "string",
+        "currying",
+        "papply",
+        "sleep"
     ],
     "homepage": "https://github.com/YounGoat/jinang",
     "description": "Collection of Node.js / ECMAScript Gists",
