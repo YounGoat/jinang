@@ -11,15 +11,17 @@
         "test": "mocha"
     },
     "name": "jinang",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "main": "index.js",
     "keywords": [
         "array",
         "object",
+        "clone",
         "string",
         "currying",
         "papply",
-        "sleep"
+        "sleep",
+        "json-file"
     ],
     "homepage": "https://github.com/YounGoat/jinang",
     "description": "Collection of Node.js / ECMAScript Gists",
