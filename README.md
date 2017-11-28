@@ -38,6 +38,8 @@ throw new MyError('Helo word!');
 
 ##	API
 
+All sub-modules in __jinang__ are independent from each other. Use `require('jinang/<subModuleName>')` to require the sub-modules.
+
 For your convenience, avaiable modules included in *jinang* are listed here,
 
 *   [cloneObject](#cloneobject)
@@ -45,6 +47,7 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [defineError](#defineerror)
 *   [forInObject](#forinobject)
 *   [jointString](#jointstring)
+*   [JsonFile](#jsonfile)
 *   [modifyUrl](#modifyurl)
 *   [papply](#papply)
 *   [sleep](#sleep)
@@ -135,6 +138,14 @@ jointString('/', 'a/',  'b');
 jointString('/', 'a' ,  'b');
 // All return 'a/b'.
 ```
+
+### JsonFile
+
+*   class __JsonFile__( string *pathname* )
+*   object __\<instance\>.json__  
+    Handle to read/write JSON data.
+*   void __\<instance\>.save__()
+*   void __\<instance\>.remove__()
 
 ### modifyUrl
 
