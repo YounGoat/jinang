@@ -247,6 +247,8 @@ function formatUrl(options) {
     };
 
     options = parseOptions(options, optionsDef);
+
+    // ...
 }
 ```
 
