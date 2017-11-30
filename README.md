@@ -7,6 +7,8 @@ __Collection of Node.js / ECMAScript Mini Modules__
 
 The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic box. The modules in *jinang* are independent for each other, and are for different usage.
 
+__jinang__ is an incubator. Successful sub modules may be encouraged to be published as independent NPM packages.
+
 ##	Table of contents
 
 *	[Get Started](#get-started)
@@ -50,6 +52,8 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [JsonFile](#jsonfile)
 *   [modifyUrl](#modifyurl)
 *   [papply](#papply)
+*   [parseOptions](#parseoptions)
+*   [PoC](#poc)
 *   [sleep](#sleep)
 
 ### cloneObject
@@ -179,6 +183,95 @@ Read more about *partial application*:
 *   [Curry or Partial Application? The Difference Between Partial Application and Curry](https://medium.com/javascript-scene/curry-or-partial-application-8150044c78b8)
 *   StackOverflow.com, [What is the difference between currying and partial application?](https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application)
 *   2ality.com, [Currying versus partial application (with JavaScript code)](http://2ality.com/2011/09/currying-vs-part-eval.html)
+
+### parseOptions
+
+To normalise options argument.
+
+```javascript
+const parseOptions = requrie('jinang/parseOptions');
+
+const options = {
+    Domain: 'www.example.com',
+    port: 8080,
+    path: '/index.html',
+};
+
+const def = {
+    // Whether the property names of *options* are case sensitive.
+    // DEFAULT false
+    caseSensitive: false,
+
+    // If set true, properties not explicitly declared will be ignored.
+    // DEFAULT false
+    explicit: true,
+
+    // Declare properties in *options*.
+    columns: [ 
+        'port', 
+        { name: 'hostname', alias: 'domain' } 
+    ],
+};
+
+const po = parseOptions(options, def);
+// RETURN {
+//     hostname: 'www.example.com',
+//     port: 8080
+// }
+```
+
+__parseOptions__ is an easy way to make your function paramemters more friendly. 
+
+```javascript
+function formatUrl(options) {
+    
+    const optionsDef = {
+        caseSensitive: false, 
+        explicit: true,
+
+        // Property *columns* of definition may be an array or object.
+        columns: [
+            // Use object to define/declare a column.
+            { name: 'protocol', default: 'http' },
+            { name: 'query', alias: [ 'querystring', 'queries' ] },
+
+            // Use description string to define/declare a column.
+            'hostname required alias(domain, domainName)',
+
+            // Only column name is also OK.
+            'port',
+            'path',
+            'search',
+            'hash'
+        ]
+    };
+
+    options = parseOptions(options, optionsDef);
+}
+```
+
+### PoC
+
+__PoC__ means *Promise or Callback*. It may be invoked in an asychronuous function to create an return an instance of `Promise` or to invoke the `callback` function if passed.
+
+```javascript
+const PoC = require('jinang/PoC');
+
+function asyncDemo(params, callback) {
+    return PoC((done) => {
+        // ...
+        done(error, data);
+    }, callback);
+};
+
+asyncDemo(params)
+    .then((data) => { /* ... */ })
+    .catch((error) => { /* ... */ })
+    ;
+
+// When callback passed, PoC will return void.
+asyncDemo(params, (error, data) => { /* ... */ });
+```
 
 ### sleep
 
