@@ -1,4 +1,4 @@
-#	jinang
+npm#	jinang
 __Collection of Node.js / ECMAScript Mini Modules__
 
 [![total downloads of jinang](https://img.shields.io/npm/dt/jinang.svg)](https://www.npmjs.com/package/jinang)
@@ -44,9 +44,11 @@ All sub-modules in __jinang__ are independent from each other. Use `require('jin
 
 For your convenience, avaiable modules included in *jinang* are listed here,
 
+*   [absorb](#absorb)
 *   [cloneObject](#cloneobject)
 *   [currying](#currying)
 *   [defineError](#defineerror)
+*   [Directory](#directory)
 *   [forInObject](#forinobject)
 *   [jointString](#jointstring)
 *   [JsonFile](#jsonfile)
@@ -55,6 +57,11 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [parseOptions](#parseoptions)
 *   [PoC](#poc)
 *   [sleep](#sleep)
+*   [split](#split)
+
+### absorb
+
+*   number __absorb__( Array foo, Array bar );
 
 ### cloneObject
 
@@ -90,7 +97,7 @@ curriedPlus(1)(2);    // RETURN a new function.
 curriedPlus(1)(2)(3); // RETURN 6.
 ```
 
-ATTENTION: __Although *Currying* and *Partial Application* are mutually related, they are DIFFERENT.__ If you wanna create a new function which is based on an existing function and with some arguments predefined, use __[papply](#papply).
+ATTENTION: __Although *Currying* and *Partial Application* are mutually related, they are DIFFERENT.__ If you wanna create a new function which is based on an existing function and with some arguments predefined, use __[papply](#papply)__.
 
 Read more about *currying*:
 *   WIKIPEDIA.org, [Currying](https://en.wikipedia.org/wiki/Currying)
@@ -114,6 +121,17 @@ const MyError = defineError('MyError', Error, function(message) {
 throw new MyError('Helo word!');
 ```
 
+### Directory
+
+*   class __Directory__( string *homepath* )
+*   void __\<instance\>.append__( string *filename*, string | Buffer *data* )
+*   boolean __\<instance\>.exists__( string *filename*, string | Buffer *data* )
+*   void __\<instance\>.mkdir__( string *pathname* )
+*   string __\<instance\>.resolve__( string *filename* )
+*   __\<instance\>.read__( string *filename*, string | Buffer *data* )
+*   __\<instance\>.append__( string *filename*, string | Buffer *data* )
+*   __\<instance\>.append__( string *filename*, string | Buffer *data* )
+
 ### forInObject
 
 *   void __forInObject__( object *foo*, Function *iterator* )  
@@ -121,12 +139,12 @@ throw new MyError('Helo word!');
     
 E.g. 
 ```javascript
-const forInObject - require('jinang/forInObject');
+const forInObject = require('jinang/forInObject');
 forInObject({ name: 'YounGoat' }, (name, value) {
     console.log(name);
     console.log(value);
 });
-```
+ ```
 
 ### jointString
 
@@ -295,6 +313,38 @@ co(function*() {
     yield sleep.promise(2000);
 });
 ```
+
+### split
+
+Split string in different ways.
+
+*   Array __split__(string *s*, string | RegExp *seperator*)  
+    The first parameter is the string to be split.  
+    *seperator* may be a string or a regular expression object.
+
+*   Array __split__(string *s*, string | RegExp *seperator*, string | Array *delimiter*)  
+    Substring enbraced by SAME *delimiter* will not be split. Each *delimiter* SHOULD be a character (1-length string).
+
+*   Array __split__(string *s*, string | RegExp *seperator*, string | Array *delimiter*, string *escaper*)  
+    
+
+```javascript
+const split = require('jinang/split');
+
+split('foo bar baz', ' ');
+// RETURN: [ "foo", "bar", "baz" ]
+
+split('foo==bar==baz', '==');
+// RETURN: [ "foo", "bar", "baz" ]
+
+split('foo "bar baz"', ' ', '"');
+// RETURN: [ "foo", "bar baz" ]
+
+split('foo "bar\\"baz"', ' ', '"');
+// RETURN: [ "foo", "bar\\"baz" ]
+```
+
+Read [unit test code](./test/split.js) for more examples.
 
 ##  Why *jinang*
 

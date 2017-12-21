@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.2.0] - Dec 22, 2017
+
+*   __[jinang/absorb](./README.md#absorb) added.
+
 ##  [0.1.0] - Nov 30, 2017
 
 *   __[jinang/PoC](./README.md#poc) added.

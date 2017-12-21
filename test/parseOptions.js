@@ -5,7 +5,6 @@ const MODULE_REQUIRE = 1
     , assert = require('assert')
 
     /* NPM */
-    , co = require('co')
     , noda = require('noda')
 
     /* in-package */
@@ -94,18 +93,25 @@ describe('parseOptions', () => {
 
         const options = {
             domain: 'www.example.com',
+            subpath: '/index.html'
         };
         let po = parseOptions(options, {
-            columns: [ 'hostname alias(domain)' ],
+            columns: [ 
+                'hostname alias(domain)',
+                'path alias (subpath)',
+                'port default(8080)'
+            ],
         });
         assert.equal(po.hostname, 'www.example.com');
+        assert.equal(po.path, '/index.html');
+        assert.equal(po.port, 8080);
     });
 
     it('column default', () => {
         const options = {};    
         let po = parseOptions(options, { 
             columns: { 
-                protocol: { default: 'http' } 
+                protocol: { default: 'http' }
             },
         });
         assert.equal(po.protocol, 'http');

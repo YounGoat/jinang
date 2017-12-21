@@ -4,9 +4,13 @@ const MODULE_REQUIRE = 1
     /* built-in */
     
     /* NPM */
-    , noda = require('noda')
     
     /* in-package */
     ;
 
-module.exports = noda.requireDir(__dirname);
+function absorb(a, b) {
+    a.push.apply(a, b);
+    return a.length;
+}
+
+module.exports = absorb;

@@ -12,8 +12,10 @@ function parseColumn(desc) {
     let column = null;
     if (typeof desc == 'string') {
         let inParentheses = [];
-        desc = desc.replace(/\([^)]+\)/g, (content) => {
+
+        desc = desc.replace(/\s*\([^)]+\)/g, (content) => {
             let index = inParentheses.length;
+            content = content.trim();
             inParentheses.push(content.substring(1, content.length - 1));
             return `#${index}`;
         });
@@ -36,11 +38,21 @@ function parseColumn(desc) {
                 argsText = inParentheses[parseInt(RegExp.$2)];
             }
 
-            if ([ 'required' /*, ... */ ].includes(deco)) {
-                column[deco] = !notdeco;
-            }
-            else if ('alias' == deco) {
-                column.alias = argsText.split(',').map(name => name.trim());
+            switch (deco) {
+                case 'required':
+                    column[deco] = !notdeco;
+                    break;
+
+                case 'alias':
+                    column.alias = argsText.split(',').map(name => name.trim());
+                    break;
+
+                case 'default':
+                    column.default = JSON.parse(argsText);
+                    break;
+            
+                default:
+                    break;
             }
 
             // Reset the NOT decorator.
