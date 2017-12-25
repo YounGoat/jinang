@@ -61,7 +61,7 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 
 ### absorb
 
-*   number __absorb__( Array foo, Array bar );
+*   number __absorb__( Array foo, Array bar )
 
 ### cloneObject
 
@@ -124,13 +124,14 @@ throw new MyError('Helo word!');
 ### Directory
 
 *   class __Directory__( string *homepath* )
-*   void __\<instance\>.append__( string *filename*, string | Buffer *data* )
-*   boolean __\<instance\>.exists__( string *filename*, string | Buffer *data* )
-*   void __\<instance\>.mkdir__( string *pathname* )
-*   string __\<instance\>.resolve__( string *filename* )
-*   __\<instance\>.read__( string *filename*, string | Buffer *data* )
-*   __\<instance\>.append__( string *filename*, string | Buffer *data* )
-*   __\<instance\>.append__( string *filename*, string | Buffer *data* )
+*   void    __\<instance\>.append__ ( string *filename*, string | Buffer *data* )
+*   boolean __\<instance\>.exists__ ( string *filename* )
+*   void    __\<instance\>.mkdir__  ( string *pathname* )
+*   number  __\<instance\>.open__   ( string *pathname*, string *flags* )
+*   void    __\<instance\>.read__   ( string *filename*, string | Buffer *encoding* )
+*   string  __\<instance\>.resolve__( string *filename* )
+*   void    __\<instance\>.rmfr__   ( string *filename* )
+*   void    __\<instance\>.write__  ( string *filename*, string | Buffer *data* )
 
 ### forInObject
 

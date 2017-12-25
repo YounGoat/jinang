@@ -2,6 +2,8 @@
 
 const MODULE_REQUIRE = 1
     /* built-in */
+    , fs = require('fs')
+    , path = require('path')
     
     /* NPM */
     
@@ -52,7 +54,8 @@ function Directory(pathname) {
 }
 
 Directory.prototype.append = function(name, data) {
-    return fs.appendFileSync(this.resolve(name), data);
+    fs.appendFileSync(this.resolve(name), data);
+    return;
 };
 
 Directory.prototype.exists = function(name) {
@@ -61,22 +64,32 @@ Directory.prototype.exists = function(name) {
 
 Directory.prototype.mkdir = function(name) {
     let realpath = this.resolve(name);
+    mkdirp(realpath);
+    return;
 };
 
-Directory.prototype.resolve = function(name) {    
-    return path.resolve(this.homepath, trim(name));
+Directory.prototype.open = function(name, flag) {
+    let realpath = this.resolve(name);
+    mkdirp(path.dirname(realpath));
+    return fs.openSync(realpath, flag);
 };
 
 Directory.prototype.read = function(name, encoding) {
     return fs.readFileSync(this.resolve(name), encoding);
 };
 
+Directory.prototype.resolve = function(name) {    
+    return path.resolve(this.homepath, trim(name));
+};
+
 Directory.prototype.rmfr = function(name) {
-    rmfr(this.resolve(name));  
+    rmfr(this.resolve(name));
+    return;
 };
 
 Directory.prototype.write = function(name, data) {
-    return fs.writeFileSync(this.resolve(name), data);
+    fs.writeFileSync(this.resolve(name), data);
+    return;
 };
 
 module.exports = Directory;
