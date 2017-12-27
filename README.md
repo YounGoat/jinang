@@ -56,6 +56,7 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [papply](#papply)
 *   [parseOptions](#parseoptions)
 *   [PoC](#poc)
+*   [safeClone](#safeclone)
 *   [sleep](#sleep)
 *   [split](#split)
 
