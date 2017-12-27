@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.3.0] - Dec 27, 2017
+
+*	__[jinang/safeClone](./README.md#safeclone) added.
+*	__[jinang/papply](./README.md#papply) powered with `papply.tail()` and `papply.position()`.
+
 ##  [0.2.1] - Dec 25, 2017
 
 *   __[jinang/Directory](./README.md#directory) expanded with some functions.
