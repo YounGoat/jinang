@@ -11,7 +11,7 @@ const MODULE_REQUIRE = 1
     , safeClone = noda.inRequire('safeClone')
     ;
 
-describe.only('safeClone', () => {
+describe('safeClone', () => {
     it('clone primitive values', () => {
         assert.strictEqual(null, safeClone(null));
         assert.strictEqual(true, safeClone(true));
