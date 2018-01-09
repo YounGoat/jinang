@@ -1,9 +1,8 @@
-npm#	jinang
+#	jinang
 __Collection of Node.js / ECMAScript Mini Modules__
 
 [![coverage status of github.com/YounGoat/jinang](https://img.shields.io/coveralls/YounGoat/jinang/master.svg)](https://coveralls.io/github/YounGoat/jinang2?branch=master)
 [![build status of github.com/YounGoat/jinang](https://travis-ci.org/YounGoat/jinang.svg?branch=master)](https://travis-ci.org/YounGoat/jinang)
-
 [![total downloads of jinang](https://img.shields.io/npm/dt/jinang.svg)](https://www.npmjs.com/package/jinang)
 [![jinang's License](https://img.shields.io/npm/l/jinang.svg)](https://www.npmjs.com/package/jinang)
 [![latest version of jinang](https://img.shields.io/npm/v/jinang.svg)](https://www.npmjs.com/package/jinang)
