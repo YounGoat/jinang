@@ -2,7 +2,11 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
-##	[0.4.0] - Jan 4，2017
+##	[0.5.0] - Jan 8, 2018
+
+*   __[jinang/Directory](./README.md#directory) expanded with some functions.
+
+##	[0.4.0] - Jan 4，2018
 
 *	__[jinang/Progress](./README.md#progress) added.
 

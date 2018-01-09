@@ -58,6 +58,18 @@ Directory.prototype.append = function(name, data) {
     return;
 };
 
+Directory.prototype.createReadStream = function(name, options) {
+    let realpath = this.resolve(name);
+    mkdirp(path.dirname(realpath));
+    return fs.createReadStream(realpath, options);
+};
+
+Directory.prototype.createWriteStream = function(name, options) {
+    let realpath = this.resolve(name);
+    mkdirp(path.dirname(realpath));
+    return fs.createWriteStream(realpath, options);
+};
+
 Directory.prototype.exists = function(name) {
     return fs.existsSync(this.resolve(name));
 };
@@ -78,7 +90,8 @@ Directory.prototype.read = function(name, encoding) {
     return fs.readFileSync(this.resolve(name), encoding);
 };
 
-Directory.prototype.resolve = function(name) {    
+Directory.prototype.resolve = function(name) {
+    name = name.toString();
     return path.resolve(this.homepath, trim(name));
 };
 

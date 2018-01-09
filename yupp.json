@@ -1,5 +1,7 @@
 {
 	"badges": [
-		"npm.*"
+		"npm.*",
+		"github.coveralls",
+		"github.travis"
 	]
 }

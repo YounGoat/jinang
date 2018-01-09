@@ -1,6 +1,9 @@
 npm#	jinang
 __Collection of Node.js / ECMAScript Mini Modules__
 
+[![coverage status of github.com/YounGoat/jinang](https://img.shields.io/coveralls/YounGoat/jinang/master.svg)](https://coveralls.io/github/YounGoat/jinang2?branch=master)
+[![build status of github.com/YounGoat/jinang](https://travis-ci.org/YounGoat/jinang.svg?branch=master)](https://travis-ci.org/YounGoat/jinang)
+
 [![total downloads of jinang](https://img.shields.io/npm/dt/jinang.svg)](https://www.npmjs.com/package/jinang)
 [![jinang's License](https://img.shields.io/npm/l/jinang.svg)](https://www.npmjs.com/package/jinang)
 [![latest version of jinang](https://img.shields.io/npm/v/jinang.svg)](https://www.npmjs.com/package/jinang)
@@ -125,15 +128,17 @@ throw new MyError('Helo word!');
 
 ### Directory
 
-*   class __Directory__( string *homepath* )
-*   void    __\<instance\>.append__ ( string *filename*, string | Buffer *data* )
-*   boolean __\<instance\>.exists__ ( string *filename* )
-*   void    __\<instance\>.mkdir__  ( string *pathname* )
-*   number  __\<instance\>.open__   ( string *pathname*, string *flags* )
-*   void    __\<instance\>.read__   ( string *filename*, string | Buffer *encoding* )
-*   string  __\<instance\>.resolve__( string *filename* )
-*   void    __\<instance\>.rmfr__   ( string *filename* )
-*   void    __\<instance\>.write__  ( string *filename*, string | Buffer *data* )
+*   class       __Directory__( string *homepath* )
+*   void        __\<instance\>.append__ ( string *filename*, string | Buffer *data* )
+*   ReadStream  __\<instance\>.createReadStream__  ( string *filename* [, object *options* ] )
+*   WriteStream __\<instance\>.createWriteStream__ ( string *filename* [, object *options* ] )
+*   boolean     __\<instance\>.exists__ ( string *filename* )
+*   void        __\<instance\>.mkdir__  ( string *pathname* )
+*   number      __\<instance\>.open__   ( string *pathname*, string *flags* )
+*   void        __\<instance\>.read__   ( string *filename*, string | Buffer *encoding* )
+*   string      __\<instance\>.resolve__( string *filename* )
+*   void        __\<instance\>.rmfr__   ( string *filename* )
+*   void        __\<instance\>.write__  ( string *filename*, string | Buffer *data* )
 
 ### forInObject
 
