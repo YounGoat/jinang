@@ -66,12 +66,13 @@ function parseColumn(desc) {
 }
 
 /**
- * @param  {object}  options
- * @param  {object} [def]                      Definition of options
- * @param  {object} [def.caseSensitive=false]  If properties of *options* is case-sensitive.
- * @param  {object} [def.explicit=false]       If true, only properties defined in *def.columns* will be accepted.
- * @param  {object} [def.columns]
- * @param  {[]}     [def.columns]
+ * @param  {object}   options
+ * @param  {object}  [def]                      Definition of options
+ * @param  {boolean} [def.caseSensitive=false]  If properties of *options* is case-sensitive.
+ * @param  {boolean} [def.keepNameCase=false]   Keep the case of column name in return object.
+ * @param  {object}  [def.explicit=false]       If true, only properties defined in *def.columns* will be accepted.
+ * @param  {object}  [def.columns]
+ * @param  {[]}      [def.columns]
  * 
  * ATTENTION: 
  * . Argument *def* itself is Case-Sensitive.
@@ -141,7 +142,8 @@ function parseOptions(options, def) {
                 let alias = column.alias instanceof Array ? column.alias : [ column.alias ];
                 for (let i = 0; i < alias.length && !found; i++) {
                     // If there are more than one alias, the former in definition is prior.
-                    found = extractProperty(alias[i], propertyName);
+                    let name = def.caseSensitive ? alias[i] : alias[i].toLowerCase();
+                    found = extractProperty(name, propertyName);
                 }
             }
 

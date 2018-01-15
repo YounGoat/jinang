@@ -51,9 +51,15 @@ describe('parseOptions', () => {
         const options = {
             domain: 'www.example.com',
         };
-
         let po = parseOptions(options, { 
             columns: [ { name: 'hostname', alias: 'domain' } ],
+        });
+        assert.equal(po.hostname, 'www.example.com');
+        assert.equal(po.domain, undefined);
+
+        po = parseOptions(options, { 
+            caseSensitive: false,
+            columns: [ { name: 'hostname', alias: 'Domain' } ],
         });
         assert.equal(po.hostname, 'www.example.com');
         assert.equal(po.domain, undefined);
