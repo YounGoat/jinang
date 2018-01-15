@@ -33,6 +33,19 @@ describe('parseOptions', () => {
         assert.equal(po.host, undefined);
     });
 
+    it('keep name case', () => {
+        const options = {
+            Host: 'www.example.com',
+        };
+
+        let po = parseOptions(options, { 
+            caseSensitive: false, 
+            keepNameCase: true,
+            columns: [ 'Hostname alias(host)' ] });
+        assert.equal(po.hostname, undefined);
+        assert.equal(po.Hostname, 'www.example.com');
+    });
+
     it('explicit', () => {
         const options = {
             host: 'www.example.com',

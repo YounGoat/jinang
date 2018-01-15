@@ -255,7 +255,7 @@ const parseOptions = requrie('jinang/parseOptions');
 
 const options = {
     Domain: 'www.example.com',
-    port: 8080,
+    Port: 8080,
     path: '/index.html',
 };
 
@@ -264,6 +264,11 @@ const def = {
     // DEFAULT false
     caseSensitive: false,
 
+    // Whether the property names of returned (parsed) object may keep the case 
+    // as what column names look like, even *def.caseSensitive* is false.
+    // DEFAULT false
+    keepNameCase: false,
+
     // If set true, properties not explicitly declared will be ignored.
     // DEFAULT false
     explicit: true,
@@ -271,13 +276,13 @@ const def = {
     // Declare properties in *options*.
     columns: [ 
         'port', 
-        { name: 'hostname', alias: 'domain' } 
+        { name: 'Hostname', alias: 'domain' } 
     ],
 };
 
 const po = parseOptions(options, def);
 // RETURN {
-//     hostname: 'www.example.com',
+//     Hostname: 'www.example.com',
 //     port: 8080
 // }
 ```
