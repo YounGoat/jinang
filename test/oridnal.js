@@ -11,7 +11,7 @@ const MODULE_REQUIRE = 1
     , ordinal = noda.inRequire('ordinal')
     ;
 
-describe.only('ordinal', () => {
+describe('ordinal', () => {
 
     it('ordinal number', () => {
         assert(  '1st', ordinal(  1));
