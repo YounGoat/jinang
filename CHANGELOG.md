@@ -4,38 +4,38 @@ Notable changes to this project will be documented in this file. This project ad
 
 ##	[0.6.0] - Jan 20, 2018
 
-*	__[jinang/ordinal](./README.md#ordinal) added.
+*	__[jinang/ordinal](./README.md#ordinal)__ added.
 
 ##	[0.5.2] - Jan 15, 2018
 
-*	__[jinang/parseOptions](./README.md#parseoptions): Fixed the bug that alias is still case sensitive when the property `caseSensitive` is set `true`.
-*	__[jinang/parseOptions](./README.md#parseoptions): New definition property `keepNameCase` added.
+*	__[jinang/parseOptions](./README.md#parseoptions)__: Fixed the bug that alias is still case sensitive when the property `caseSensitive` is set `true`.
+*	__[jinang/parseOptions](./README.md#parseoptions)__: New definition property `keepNameCase` added.
 
 ##	[0.5.0] - Jan 8, 2018
 
-*   __[jinang/Directory](./README.md#directory) expanded with some functions.
+*   __[jinang/Directory](./README.md#directory)__ expanded with some functions.
 
 ##	[0.4.0] - Jan 4，2018
 
-*	__[jinang/Progress](./README.md#progress) added.
+*	__[jinang/Progress](./README.md#progress)__ added.
 
 ##	[0.3.0] - Dec 27, 2017
 
-*	__[jinang/safeClone](./README.md#safeclone) added.
-*	__[jinang/papply](./README.md#papply) powered with `papply.tail()` and `papply.position()`.
+*	__[jinang/safeClone](./README.md#safeclone)__ added.
+*	__[jinang/papply](./README.md#papply)__ powered with `papply.tail()` and `papply.position()`.
 
 ##  [0.2.1] - Dec 25, 2017
 
-*   __[jinang/Directory](./README.md#directory) expanded with some functions.
+*   __[jinang/Directory](./README.md#directory)__ expanded with some functions.
 
 ##  [0.2.0] - Dec 22, 2017
 
-*   __[jinang/absorb](./README.md#absorb) added.
+*   __[jinang/absorb](./README.md#absorb)__ added.
 
 ##  [0.1.0] - Nov 30, 2017
 
-*   __[jinang/PoC](./README.md#poc) added.
-*   __[jinang/parseOptions](./README.md#parseoptions) added.
+*   __[jinang/PoC](./README.md#poc)__ added.
+*   __[jinang/parseOptions](./README.md#parseoptions)__ added.
 
 ##  [0.0.5] - Nov 29, 2017
 
