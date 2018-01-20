@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.6.0] - Jan 20, 2018
+
+*	__[jinang/ordinal](./README.md#ordinal) added.
+
 ##	[0.5.2] - Jan 15, 2018
 
 *	__[jinang/parseOptions](./README.md#parseoptions): Fixed the bug that alias is still case sensitive when the property `caseSensitive` is set `true`.

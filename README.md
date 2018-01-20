@@ -55,6 +55,7 @@ For your convenience, avaiable modules included in *jinang* are listed here,
 *   [jointString](#jointstring)
 *   [JsonFile](#jsonfile)
 *   [modifyUrl](#modifyurl)
+*   [ordinal](#ordinal)
 *   [papply](#papply)
 *   [parseOptions](#parseoptions)
 *   [PoC](#poc)
@@ -182,6 +183,34 @@ jointString('/', 'a' ,  'b');
 *   string __modifyUrl.pathname__( string *urlname*, string *pathname*, char *flag* )
 *   string __modifyUrl.protocol__( string *urlname*, string *protocol* )
 *   string __modifyUrl.query__( string *urlname*, string|Object *query*, char *flag* )
+
+### ordinal
+
+Acquire the ordinal form of a natural number, e.g. *1st* for *1*, *22nd* for *22*.
+
+```javascript
+const ordinal = require('jinang/ordinal');
+
+ordinal(1);
+// RETURN 1st
+
+ordinal(101);
+// RETURN 101st
+
+ordinal.suffix(22);
+// RETURN nd
+
+ordinal(0);
+// throws Error
+```
+
+*   string __ordinal__(number | string *n*) throws  
+    Return the ordinal form of a natural number.  
+    If *n* is not a natural number, an Error will be thrown.
+
+*   string __oridnal.suffix__(number | string *n*) throws    
+    Return only the ordinal suffix.  
+    If *n* is not a natural number, an Error will be thrown.
 
 ### papply
 
@@ -318,6 +347,13 @@ function formatUrl(options) {
     // ...
 }
 ```
+
+A column definition may be an object with following properties:
+*   __name__ *string* 
+*   __alias__ *string* | *string[]*
+*   __default__ *any* OPTIONAL
+*   __parser__ *Function* OPTIONAL
+*   __required__ *boolean* DEFAULT `false` 
 
 ### PoC
 
