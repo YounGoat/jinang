@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.7.0] - Jan 28, 2018
+
+*	__[jinang/promiseRejectionAutoHandle](./README.md#promiserejectionautohandle)__ added.
+
 ##	[0.6.0] - Jan 20, 2018
 
 *	__[jinang/ordinal](./README.md#ordinal)__ added.
