@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.8.0] - Feb 7th, 2018
+
+*	__[jinang/ott](./README.md#ott)__ added.
+
 ##	[0.7.0] - Jan 28, 2018
 
 *	__[jinang/promiseRejectionAutoHandle](./README.md#promiserejectionautohandle)__ added.
