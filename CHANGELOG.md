@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.9.0] - Feb 22th, 2018
+
+*	__[jinang/open](./README.md#open)__ added.
+
 ##	[0.8.0] - Feb 7th, 2018
 
 *	__[jinang/ott](./README.md#ott)__ added.
