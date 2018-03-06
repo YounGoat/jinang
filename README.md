@@ -8,7 +8,7 @@ __Collection of Node.js / ECMAScript Mini Modules__
 [![latest version of jinang](https://img.shields.io/npm/v/jinang.svg)](https://www.npmjs.com/package/jinang)
 
 
->	Other Languages / 敬请等待 / 敬請等待
+>	Other Languages / 敬请等待 / 敬請等待  
 >	If links in this document not avaiable, please access [README on GitHub](https://github.com/YounGoat/jinang/blob/master/README.md) directly.
 
 The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic box. The modules in *jinang* are independent for each other, and are for different usage.
