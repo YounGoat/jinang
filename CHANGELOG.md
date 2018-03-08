@@ -2,6 +2,13 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.11.0] - Mar 8th, 2018
+
+*   __[jinang/unescaping](./docs/unescaping.md)__ added.
+*   __[jinang/isGenerator](./docs/isGenerator.md)__ added.
+*   __[jinang/co](./docs/co.md)__ allows `yield` another GeneratorFunction or generator.
+*   README.md enriched with descriptions for each module.
+
 ##	[0.10.0] - Mar 6th, 2018
 
 *	documentation reconstructed, README.md split into [docs](./docs).

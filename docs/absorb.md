@@ -1,5 +1,9 @@
 ##	jinang/absorb
 
+Used to concatenate following array(s) to the firt one. Be different from `[].concat()`, `absort()` will push following values or items of following array(s) to the first array. 
+
+__jinang/absorb__ achieves the similiar for arrays as what as `Object.assign()` does for objects.
+
 *   number __absorb__( Array foo, Array bar )
 
 ```javascript

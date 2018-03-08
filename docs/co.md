@@ -17,7 +17,15 @@ function* success() {
         setTimeout(() => callback(null, 'B'), 100);
     };
 
+    let c = yield subtask;
+
     return a + b;
+}
+
+function* subtask() {
+    let m = yield Promise.resolve(1);
+    let n = yield Promise.resolve(1);
+    return m + n;
 }
 
 // A triditional callback is acceptable.

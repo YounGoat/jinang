@@ -6,11 +6,22 @@ const MODULE_REQUIRE = 1
 	/* NPM */
 	
 	/* in-package */
+	, isGenerator = require('./isGenerator')
+	, isGeneratorFunction = require('./isGeneratorFunction')
 	;
 
-function co(generatorFunction, callback) {
+function co(G, callback) {
 	let RR = (resolve, reject) => {
-		let gen = generatorFunction();
+		let gen;
+		if (isGeneratorFunction(G)) {
+			gen = G();
+		}
+		else if (isGenerator(G)) {
+			gen = G;
+		}
+		else {
+			return resolve(typeof G == 'function' ? G() : G);
+		}
 		nextLoop();
 
 		function nextLoop(err, value) {
@@ -33,6 +44,9 @@ function co(generatorFunction, callback) {
 			else if (step.value instanceof Promise) {
 				step.value.then(ret => nextLoop(null, ret)).catch(reject);
 			}
+			else if (isGeneratorFunction(step.value) || isGenerator(step.value)) {
+				co(step.value, nextLoop);
+			}
 			else if (step.value instanceof Function) {
 				try {
 					step.value(nextLoop);
@@ -41,7 +55,7 @@ function co(generatorFunction, callback) {
 				}
 			}
 			else {
-				throw new Error('operator `yield` expects a promise or thunkify function');
+				throw new Error('operator `yield` expects a promise, generator function or thunkify function');
 			}
 		}
 	};

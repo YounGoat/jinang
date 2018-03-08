@@ -15,7 +15,7 @@ describe('co, without callback (promise returned)', () => {
     const A = 100;
     const E = 'error';
 
-    it('promise (resolved)', (done) => {
+    it('promise (resolved)', done => {
         function* f() {
             var a = yield Promise.resolve(A);
             return a;
@@ -23,7 +23,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).then(ret => assert.equal(ret, A)).then(done);
     });
 
-    it('promise (reject)', (done) => {
+    it('promise (reject)', done => {
         function* f() {
             yield Promise.reject(E);
         };
@@ -31,7 +31,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).catch(err => assert.equal(err, E)).then(done);
     });
 
-    it('promise (runtime error)', (done) => {
+    it('promise (runtime error)', done => {
         function* f() {
             yield new Promise(() => {
                 throw E;
@@ -40,7 +40,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).catch(err => assert.equal(err, E)).then(done);
     });
 
-    it('thunkified function (data returned)', (done) => {
+    it('thunkified function (data returned)', done => {
         function* f() {
             var a = yield callback => {
                 process.nextTick(() => callback(null, A));
@@ -50,7 +50,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).then(ret => assert.equal(ret, A)).then(done);
     });
 
-    it('thunkified function (error returned)', (done) => {
+    it('thunkified function (error returned)', done => {
         function* f() {
             var a = yield callback => {
                 process.nextTick(() => callback(E));
@@ -60,7 +60,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).catch(err => assert.equal(err, E)).then(done);
     });
 
-    it('thunkified function (runtime error)', (done) => {
+    it('thunkified function (runtime error)', done => {
         function* f() {
             yield callback => {
                 throw E;
@@ -69,7 +69,7 @@ describe('co, without callback (promise returned)', () => {
         co(f).catch(err => assert.equal(err, E)).then(done);
     });
 
-    it('runtime error (directly in generatorFunction body)', (done) => {
+    it('runtime error (directly in generatorFunction body)', done => {
         function* f() {
             throw E;
         }
@@ -82,7 +82,7 @@ describe('co, with callback (undefined returned)', () => {
     const A = 100;
     const E = 'error';
 
-    it('promise (resolved)', (done) => {
+    it('promise (resolved)', done => {
         function* f() {
             var a = yield Promise.resolve(A);
             return a;
@@ -93,7 +93,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('promise (reject)', (done) => {
+    it('promise (reject)', done => {
         function* f() {
             yield Promise.reject(E);
         };
@@ -103,7 +103,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('promise (runtime error)', (done) => {
+    it('promise (runtime error)', done => {
         function* f() {
             yield new Promise(() => {
                 throw E;
@@ -115,7 +115,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('thunkified function (data returned)', (done) => {
+    it('thunkified function (data returned)', done => {
         function* f() {
             var a = yield callback => {
                 process.nextTick(() => callback(null, A));
@@ -128,7 +128,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('thunkified function (error returned)', (done) => {
+    it('thunkified function (error returned)', done => {
         function* f() {
             var a = yield callback => {
                 process.nextTick(() => callback(E));
@@ -141,7 +141,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('thunkified function (runtime error)', (done) => {
+    it('thunkified function (runtime error)', done => {
         function* f() {
             yield callback => {
                 throw E;
@@ -153,7 +153,7 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
-    it('runtime error (directly in generatorFunction body)', (done) => {
+    it('runtime error (directly in generatorFunction body)', done => {
         function* f() {
             throw E;
         }
@@ -163,4 +163,41 @@ describe('co, with callback (undefined returned)', () => {
         });
     });
 
+});
+
+describe('co, recursion on generator', () => {
+    const A = 100;
+    const E = 'error';
+
+    it('when GeneratorFunction after yield', done => {
+        function* g() {
+            var a = yield Promise.resolve(A);
+            return a;
+        }
+        
+        function* f() {
+            return yield g;
+        }
+
+        co(f, (err, ret) => {
+            assert.equal(ret, A);
+            done();
+        });
+    });
+
+    it('when generator after yield', done => {
+        function* g(foo) {
+            var a = yield Promise.resolve(foo);
+            return a;
+        }
+        
+        function* f() {
+            return yield g(A);
+        }
+
+        co(f, (err, ret) => {
+            assert.equal(ret, A);
+            done();
+        });
+    });
 });

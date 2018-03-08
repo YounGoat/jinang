@@ -46,33 +46,79 @@ throw new MyError('Helo word!');
 
 All sub-modules in __jinang__ are independent from each other. Use `require('jinang/<subModuleName>')` to require the sub-modules.
 
-For your convenience, avaiable modules included in *jinang* are listed here,
+For your convenience, avaiable modules included in *jinang* are listed here (alphabetically sorted):
 
-*   [absorb](./docs/absorb.md)
-*   [cloneObject](./docs/cloneObject.md)
-*   [co](./docs/co.md)
-*   [currying](./docs/currying.md)
-*   [defineError](./docs/defineError.md)
-*   [Directory](./docs/Directory.md)
-*   [forInObject](./docs/forInObject.md)
-*   [isGeneratorFunction](./docs/isGeneratorFunction.md)
-*   [jointString](./docs/jointString.md)
-*   [JsonFile](./docs/JsonFile.md)
-*   [modifyUrl](./docs/modifyUrl.md)
-*   [open](./docs/open.md)
-*   [ordinal](./docs/ordinal.md)
-*   [ott](./docs/ott.md)
-*   [papply](./docs/papply.md)
-*   [parseOptions](./docs/parseOptions.md)
-*   [PoC](./docs/PoC.md)
-*   [Progress](./docs/Progress.md)
-*   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md)
-*   [safeClone](./docs/safeClone.md)
-*   [sleep](./docs/sleep.md)
-*   [split](./docs/split.md)
+*   [absorb](./docs/absorb.md)  
+    Concatenate following array(s) to the firt one.
+
+*   [cloneObject](./docs/cloneObject.md)  
+    Copy some / all properties from object and return a new one.
+
+*   [co](./docs/co.md)  
+    A wrapper of generator function.
+
+*   [currying](./docs/currying.md)  
+    Make function curried.
+
+*   [defineError](./docs/defineError.md)  
+    Create customised Error class.
+
+*   [Directory](./docs/Directory.md)  
+    Make it easier to manage a directory.
+
+*   [forInObject](./docs/forInObject.md)  
+    The combination of `for in` and `for of`.
+
+*   [isGeneratorFunction](./docs/isGeneratorFunction.md) & [isGenerator](./docs/isGenerator.md)  
+    Judge whether it is a [Generator Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) or a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator).
+
+*   [jointString](./docs/jointString.md)  
+    Concatenate strings with specified joint.
+
+*   [JsonFile](./docs/JsonFile.md)  
+    Wrapper of a JSON file.
+
+*   [modifyUrl](./docs/modifyUrl.md)  
+    Modify URLs.
+
+*   [open](./docs/open.md)  
+    Open URI with matched application.
+
+*   [ordinal](./docs/ordinal.md)  
+    Acquire the ordinal form of a natural number.
+
+*   [ott](./docs/ott.md)  
+    Wrap a function to allow it invoked only once, twice or thrice.
+
+*   [papply](./docs/papply.md)  
+    Partial application of a function.
+
+*   [parseOptions](./docs/parseOptions.md)  
+    Intelligently parse an option object.
+
+*   [PoC](./docs/PoC.md)  
+    Promise or Callback.
+
+*   [Progress](./docs/Progress.md)  
+    Progress simulator.
+
+*   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md)  
+    Avoid console warning when no cather defined.
+
+*   [safeClone](./docs/safeClone.md)  
+    A deep and partial clone method.
+    
+*   [sleep](./docs/sleep.md)  
+    Make current process to "sleep" for a while.
+
+*   [split](./docs/split.md)  
+    Split string in different ways.
+
+*   [unescaping](./docs/unescaping.md)  
+    A tiny and flexible template render.
 
 ##  Why *jinang*
 
 __jinang__ is an incubator for creatives which will make programming with Node.js much easier. 
 
-Only mini modules without any dependencies may be put into __jinang__.
+Only mini modules without any dependencies may be put into __jinang__. Although every module is small enough, they all will be maintained carefully and seriously.
