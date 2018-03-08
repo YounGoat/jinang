@@ -48,73 +48,53 @@ All sub-modules in __jinang__ are independent from each other. Use `require('jin
 
 For your convenience, avaiable modules included in *jinang* are listed here (alphabetically sorted):
 
-*   [absorb](./docs/absorb.md)  
+*   [absorb](./docs/absorb.md) :
     Concatenate following array(s) to the firt one.
-
-*   [cloneObject](./docs/cloneObject.md)  
+*   [cloneObject](./docs/cloneObject.md) :
     Copy some / all properties from object and return a new one.
-
-*   [co](./docs/co.md)  
+*   [co](./docs/co.md) :
     A wrapper of generator function.
-
-*   [currying](./docs/currying.md)  
+*   [currying](./docs/currying.md) :
     Make function curried.
-
-*   [defineError](./docs/defineError.md)  
+*   [defineError](./docs/defineError.md) :
     Create customised Error class.
-
-*   [Directory](./docs/Directory.md)  
+*   [Directory](./docs/Directory.md) :
     Make it easier to manage a directory.
-
-*   [forInObject](./docs/forInObject.md)  
-    The combination of `for in` and `for of`.
-
-*   [isGeneratorFunction](./docs/isGeneratorFunction.md) & [isGenerator](./docs/isGenerator.md)  
-    Judge whether it is a [Generator Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) or a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator).
-
-*   [jointString](./docs/jointString.md)  
+*   [forInObject](./docs/forInObject.md) :
+    The combination of [For...In](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [For...Of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+*   [isGenerator](./docs/isGenerator.md) :
+    Judge whether it is a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator).
+*   [isGeneratorFunction](./docs/isGeneratorFunction.md) :
+    Judge whether it is a [Generator Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+*   [jointString](./docs/jointString.md) :
     Concatenate strings with specified joint.
-
-*   [JsonFile](./docs/JsonFile.md)  
+*   [JsonFile](./docs/JsonFile.md) :
     Wrapper of a JSON file.
-
-*   [modifyUrl](./docs/modifyUrl.md)  
+*   [modifyUrl](./docs/modifyUrl.md) :
     Modify URLs.
-
-*   [open](./docs/open.md)  
+*   [open](./docs/open.md) :
     Open URI with matched application.
-
-*   [ordinal](./docs/ordinal.md)  
+*   [ordinal](./docs/ordinal.md) :
     Acquire the ordinal form of a natural number.
-
-*   [ott](./docs/ott.md)  
+*   [ott](./docs/ott.md) :
     Wrap a function to allow it invoked only once, twice or thrice.
-
-*   [papply](./docs/papply.md)  
+*   [papply](./docs/papply.md) :
     Partial application of a function.
-
-*   [parseOptions](./docs/parseOptions.md)  
+*   [parseOptions](./docs/parseOptions.md) :
     Intelligently parse an option object.
-
-*   [PoC](./docs/PoC.md)  
+*   [PoC](./docs/PoC.md) :
     Promise or Callback.
-
-*   [Progress](./docs/Progress.md)  
+*   [Progress](./docs/Progress.md) :
     Progress simulator.
-
-*   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md)  
+*   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md) :
     Avoid console warning when no cather defined.
-
-*   [safeClone](./docs/safeClone.md)  
+*   [safeClone](./docs/safeClone.md) :
     A deep and partial clone method.
-    
-*   [sleep](./docs/sleep.md)  
+*   [sleep](./docs/sleep.md) :
     Make current process to "sleep" for a while.
-
-*   [split](./docs/split.md)  
+*   [split](./docs/split.md) :
     Split string in different ways.
-
-*   [unescaping](./docs/unescaping.md)  
+*   [unescaping](./docs/unescaping.md) :
     A tiny and flexible template render.
 
 ##  Why *jinang*
