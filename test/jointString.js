@@ -21,4 +21,8 @@ describe('jointString', () => {
         assert.equal(jointString('/', 'a/', '/b'), 'a/b');
         assert.equal(jointString('/', 'a/', '//b'), 'a//b');
     });
+
+    it('array argument accepted', () => {
+        assert.equal(jointString('/', [ 'a', 'b' ], '/c'), 'a/b/c');
+    });
 });

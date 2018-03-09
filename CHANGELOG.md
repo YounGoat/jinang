@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.12.0] - Mar 9th, 2018
+
+*   __[jinang/inof](./docs/forInObject.md)__ added as alias of `jinang/forInObject`.
+*   __[jinang/jointString](./docs/jointString.md)__ updated to accept Array arguments.
+
 ##  [0.11.0] - Mar 8th, 2018
 
 *   __[jinang/unescaping](./docs/unescaping.md)__ added.
