@@ -94,6 +94,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Make current process to "sleep" for a while.
 *   [split](./docs/split.md) :
     Split string in different ways.
+*   [TxtFile](./docs/TxtFile.md) :
+    Wrapper of a .txt file.
 *   [unescaping](./docs/unescaping.md) :
     A tiny and flexible template render.
 

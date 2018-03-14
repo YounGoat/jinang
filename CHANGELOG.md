@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.13.0] - Mar 15th, 2018
+
+*   __[jinang/TxtFile](./docs/TxtFile.md)__ added.
+
 ##  [0.12.0] - Mar 9th, 2018
 
 *   __[jinang/inof](./docs/forInObject.md)__ added as alias of `jinang/forInObject`.

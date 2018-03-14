@@ -10,7 +10,7 @@ const MODULE_REQUIRE = 1
 	, isGeneratorFunction = require('./isGeneratorFunction')
 	;
 
-function co(G, callback) {
+function co(G, callback, compatible = false) {
 	let RR = (resolve, reject) => {
 		let gen;
 		if (isGeneratorFunction(G)) {
@@ -54,6 +54,14 @@ function co(G, callback) {
 					return reject(ex);
 				}
 			}
+			else if (compatible) {
+				if (step.value instanceof Error) {
+					nextLoop(step.value);
+				}
+				else {
+					nextLoop(null, step.value);
+				}
+			}
 			else {
 				throw new Error('operator `yield` expects a promise, generator function or thunkify function');
 			}
@@ -69,5 +77,9 @@ function co(G, callback) {
 		return new Promise(RR);
 	}
 }
+
+co.easy = function(G, callback) {
+	return co(G, callback, true);
+};
 
 module.exports = co;
