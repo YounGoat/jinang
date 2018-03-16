@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.14.0] - Mar 16th, 2018
+
+*   __[jinang/cloneObject](./docs/cloneObject.md)__ updated to accept new paramter *removeClonedKeys*.
+
 ##  [0.13.0] - Mar 15th, 2018
 
 *   __[jinang/TxtFile](./docs/TxtFile.md)__ added.
