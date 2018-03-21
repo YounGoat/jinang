@@ -11,7 +11,7 @@ const MODULE_REQUIRE = 1
     , cloneObject = noda.inRequire('cloneObject')
     ;
 
-describe.only('cloneObject', () => {
+describe('cloneObject', () => {
     let source = {
         "name": "YounGoat",
         "name_CN": "羊三河",

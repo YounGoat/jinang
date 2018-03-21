@@ -1,6 +1,6 @@
 ##	jinang/safeClone
 
-__safeClone__ is deep and partial clone method. The skeleton of the original argument will be kept and the primitive items or properties will be copied, while the complex values will be ignored. Whatever you do with the returned value, the original will not be affected.
+__safeClone__ is deep and partial clone method. The skeleton of the original argument will be kept and the primitive items or properties will be copied, while the complex values will be ignored. Whatever you do with the returned value, the original will not be affected.
 
 ```javascript
 const safeClone = require('jinang/safeClone');

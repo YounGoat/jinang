@@ -11,7 +11,11 @@ __Collection of Node.js / ECMAScript Mini Modules__
 >	Other Languages / 敬请等待 / 敬請等待  
 >	If links in this document not avaiable, please access [README on GitHub](https://github.com/YounGoat/jinang/blob/master/README.md) directly.
 
-The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic box. The modules in *jinang* are independent for each other, and are for different usage.
+##  Description
+
+__jinang__ is a collection of Node.js / ECMAScript mini modules.
+
+The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic box. The modules in __jinang__ are independent for each other, and are for different usage.
 
 __jinang__ is an incubator. Successful sub modules may be encouraged to be published as independent NPM packages.
 
@@ -21,9 +25,6 @@ __jinang__ is an incubator. Successful sub modules may be encouraged to be publi
 *	[API](#api)
 *	[Why jinang](#why-jinang)
 *	[References](#references)
-
-##	Links
-
 *	[CHANGE LOG](./CHANGELOG.md)
 *	[Homepage](https://github.com/YounGoat/jinang)
 
@@ -92,6 +93,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     A deep and partial clone method.
 *   [sleep](./docs/sleep.md) :
     Make current process to "sleep" for a while.
+*   [sogo](./docs/sogo.md) :
+    To set something into object, or get something from object.
 *   [split](./docs/split.md) :
     Split string in different ways.
 *   [TxtFile](./docs/TxtFile.md) :
