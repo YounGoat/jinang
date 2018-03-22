@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.16.0] - Mar 22nd, 2018
+
+*   __[jinang/shorten](./docs/shorten.md)__ added.
+
 ##  [0.15.0] - Mar 21st, 2018
 
 *   __[jinang/sogo](./docs/sogo.md)__ added.

@@ -12,7 +12,7 @@ const MODULE_REQUIRE = 1
     , sogo = noda.inRequire('sogo')
     ;
 
-describe.only('sogo', () => {
+describe('sogo', () => {
 
     it('sogo.set', () => {
         let foo = { };
