@@ -9,7 +9,7 @@ const MODULE_REQUIRE = 1
 	;
 
 function uncolors(text) {
-	text.replace(/\u001b\[\?{0,1}\d+(;\d+){0,2}[mlhABCDEFGK]/g, '');
+	return text.replace(/\u001b\[\?{0,1}\d+(;\d+){0,2}[mlhABCDEFGK]/g, '');
 }
 
 module.exports = uncolors;

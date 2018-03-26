@@ -2,6 +2,12 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.17.0] - Mar 26th, 2018
+
+*   __[jinang/table](./docs/table.md)__ added.
+*   __[jinang/absorb](./docs/absorb.md)__ updated to accept non-Array second argument.
+*   __[jinang/forInObject](./docs/forInObject.md)__ updated to break the iteration if necessary.
+
 ##  [0.16.0] - Mar 22nd, 2018
 
 *   __[jinang/shorten](./docs/shorten.md)__ added.

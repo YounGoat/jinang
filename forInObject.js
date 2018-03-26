@@ -10,7 +10,7 @@ const MODULE_REQUIRE = 1
 
 function forInObject(obj, fn) {
     for (let keyname in obj) {
-        fn(keyname, obj[keyname]);
+        if (fn(keyname, obj[keyname]) === false) break;
     }
 }
 

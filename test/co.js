@@ -201,3 +201,15 @@ describe('co, recursion on generator', () => {
         });
     });
 });
+
+describe('co.easy', () => {
+    it('yield Error', done => {
+        function* g() {
+           yield new Error('foo');
+        }
+        
+        co.easy(g).catch(ex => {
+            done();
+        });
+    });
+});

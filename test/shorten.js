@@ -11,7 +11,7 @@ const MODULE_REQUIRE = 1
     , shorten = noda.inRequire('shorten')
     ;
 
-describe.only('shorten', () => {
+describe('shorten', () => {
     it('shorten, keep when <= max length', () => {
         assert.equal('ching-loves-ching', shorten('ching-loves-ching', 17));
     });
