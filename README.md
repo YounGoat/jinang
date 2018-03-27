@@ -107,3 +107,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
 __jinang__ is an incubator for creatives which will make programming with Node.js much easier. 
 
 Only mini modules without any dependencies may be put into __jinang__. Although every module is small enough, they all will be maintained carefully and seriously.
+
+##  Recommendations
+
+*   [shadowing](https://www.npmjs.com/package/shadowing)
+    Keywords: deep-equal

@@ -5,7 +5,6 @@ const MODULE_REQUIRE = 1
     , assert = require('assert')
 
     /* NPM */
-    , co = require('co')
     , noda = require('noda')
 
     /* in-package */

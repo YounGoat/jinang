@@ -48,8 +48,26 @@ function table(rows, options) {
 	const formatCell = (column, value) => {
 		let text = value;
 		let size = getSize(text);
+		switch (column.align) {
+			case 'right':
+				text = SPACE.repeat(column.size - size) + text;
+				break;
+			
+			case 'center':
+				let spaceSize = column.size - size;
+				let left = Math.ceil(spaceSize / 2);
+				let right = spaceSize - left;
+				text = SPACE.repeat(left) + text + SPACE.repeat(right);
+				break;
+		
+			case 'left':
+			default:
+				text = text + SPACE.repeat(column.size - size)
+				break;
+		}	
+		
 		let padding = SPACE.repeat(options.padding);
-		return padding + text + SPACE.repeat(column.size - size) + padding;
+		return padding + text + padding;
 	};
 
 	let columns = options.columns;
@@ -87,8 +105,8 @@ function table(rows, options) {
 		rows.forEach(row => {
 			let stringifiedRow = {};
 			columns.forEach(column => {
-				if (column.formatCellter) {
-					stringifiedRow[column.name] = column.formatCellter(row[column.name]);
+				if (column.formatter) {
+					stringifiedRow[column.name] = column.formatter(row[column.name]);
 				}
 				else {
 					stringifiedRow[column.name] = row[column.name] + '';

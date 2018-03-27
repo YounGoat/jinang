@@ -36,6 +36,7 @@ Here *rows* is an array of plain objects containing data to fill table cells.
         {   /* ColumnMeta */
             name, /* string, corresponding key name of the column */
             size, /* number, column width */
+            align, /* enum('left', 'center', 'right') DEFAULT 'left' */
         }
     ],
     displayHead, /* boolean DEFAULT true */
