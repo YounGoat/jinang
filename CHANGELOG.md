@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.18.0] - Mar 28th, 2018
+
+*   __[jinang/sort](./docs/jinang.md)__ added.
+
 ##  [0.17.1] - Mar 27th, 2018
 
 *   __[jinang/table](./docs/table.md)__ udpated to support setting about column alignment.
