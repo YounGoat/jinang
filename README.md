@@ -19,6 +19,9 @@ The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic 
 
 __jinang__ is an incubator. Successful sub modules may be encouraged to be published as independent NPM packages.
 
+Here is its pedigree.  
+![jinang.pedigree](./docs/assets/jinang.pedigree.png)
+
 ##	Table of contents
 
 *	[Get Started](#get-started)
@@ -97,6 +100,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     To set something into object, or get something from object.
 *   [split](./docs/split.md) :
     Split string in different ways.
+*   [table](./docs/table.md) :
+    Create a printable table or print a table directly in console. 
 *   [TxtFile](./docs/TxtFile.md) :
     Wrapper of a .txt file.
 *   [unescaping](./docs/unescaping.md) :

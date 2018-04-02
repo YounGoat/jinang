@@ -82,4 +82,32 @@ co.easy = function(G, callback) {
 	return co(G, callback, true);
 };
 
+/**
+ * @param  {Array} arr
+ * @param  {GeneratorFunction} iterator
+ * @return Promise
+ */
+co.each = function(arr, iterator) {
+	return co(function*() {
+		for (let i = 0; i < arr.length; i++) {
+			yield iterator(arr[i], i);
+		}
+	});
+};
+
+/**
+ * @param  {Array} arr
+ * @param  {GeneratorFunction} iterator
+ * @return Promise
+ */
+co.map = function(arr, iterator) {
+	return co(function*() {
+		let ret = [];
+		for (let i = 0; i < arr.length; i++) {
+			ret[i] = yield iterator(arr[i], i);
+		}
+		return ret;
+	});
+};
+
 module.exports = co;

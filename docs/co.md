@@ -4,6 +4,8 @@ Light-weighted implementation of cocurrency wrapper of generator function.
 
 *   Promise __co__(GeneratorFunction *fn*)
 *   Promise __co.easy__(GeneratorFunction *fn*)
+*   Promise(undefined) __co.each__(Array *arr*, GeneratorFunction *iterator*)
+*   Promise(Array) __co.map__(Array *arr*, GeneratorFunction *iterator*)
 
 ```javascript
 const co = require('jinang/co');
@@ -20,7 +22,20 @@ function* success() {
 
     let c = yield subtask;
 
-    return a + b;
+    // Traverse an array.
+    let d = 0;
+    yield co.each([1,2,3], function*(num, index) {
+        d += yield Promise.resolve(num);
+    });
+    // d equals 6
+
+    // Traverse an array and return a mapped one.
+    let e = yield co.map([1,2,3], function*(num, index) {
+        return yield Promise.resolve(num * 2);
+    });
+    // e equals [2,4,6]
+
+    return a + b + c + d;
 }
 
 function* subtask() {

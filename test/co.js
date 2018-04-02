@@ -213,3 +213,63 @@ describe('co.easy', () => {
         });
     });
 });
+
+
+describe('traverse arrays', () => {
+    it('co.each', done => {
+        function* f() {
+            let nums = Array.from(arguments);
+            let total = 0;
+            yield co.each(nums, function*(n, index) {
+                total += yield Promise.resolve(n);
+            });
+            return total;
+        }
+
+        co(f(1, 2, 3, 4)).then(ret => {
+            assert.equal(ret, 10);
+            done();
+        });
+    });
+
+    it('co.each, on exception', done => {
+        const E = 'Error';
+        function* f() {
+            yield co.each([1,2], function*(n, index) {
+                throw E;
+            });
+        }
+        co(f).catch(ex => {
+            assert.equal(E, ex);
+            done();
+        });
+    });
+
+    it('co.map', done => {
+        function* f() {
+            let nums = Array.from(arguments);
+            return yield co.map(nums, function*(n, index) {
+                return yield Promise.resolve(n * 2);
+            });
+        }
+
+        co(f(1, 2, 3)).then(ret => {
+            assert.deepEqual(ret, [2, 4, 6]);
+            done();
+        });
+    });
+
+    it('co.map, on exception', done => {
+        const E = 'Error';
+        function* f() {
+            yield co.map([1,2], function*(n, index) {
+                throw E;
+            });
+        }
+
+        co(f).catch(ex => {
+            assert.equal(E, ex);
+            done();
+        });
+    });
+});

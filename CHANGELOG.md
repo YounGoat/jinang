@@ -2,6 +2,12 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.19.0] - Apr 2nd, 2018
+
+*   __[jinang/co.each](./docs/co.md)__ added.
+*   __[jinang/co.map](./docs/co.md)__ added.
+*   A pedigree added in [README.md](./README.md).
+
 ##  [0.18.0] - Mar 28th, 2018
 
 *   __[jinang/sort](./docs/jinang.md)__ added.
