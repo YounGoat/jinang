@@ -15,7 +15,7 @@ __Collection of Node.js / ECMAScript Mini Modules__
 
 __jinang__ is a collection of Node.js / ECMAScript mini modules.
 
-The name *jinang* is abbreviation of "Jin-Nang", which in chinese means a magic box. The modules in __jinang__ are independent for each other, and are for different usage.
+The name *jinang* is abbreviation of "Jin-Nang", which in Chinese means a magic box. The modules in __jinang__ are independent for each other, and are for different usage.
 
 __jinang__ is an incubator. Successful sub modules may be encouraged to be published as independent NPM packages.
 
@@ -106,6 +106,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Wrapper of a .txt file.
 *   [unescaping](./docs/unescaping.md) :
     A tiny and flexible template render.
+*   [write](./docs/write.md) :
+    Write into a file. If file not exists, create it.
 
 ##  Why *jinang*
 

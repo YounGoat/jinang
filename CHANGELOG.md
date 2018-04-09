@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.20.0] - Apr 9th, 2018
+
+*   __[jinang/write](./docs/write.md)__ added.
+
 ##  [0.19.0] - Apr 2nd, 2018
 
 *   __[jinang/co.each](./docs/co.md)__ added.
