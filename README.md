@@ -7,7 +7,6 @@ __Collection of Node.js / ECMAScript Mini Modules__
 [![jinang's License](https://img.shields.io/npm/l/jinang.svg)](https://www.npmjs.com/package/jinang)
 [![latest version of jinang](https://img.shields.io/npm/v/jinang.svg)](https://www.npmjs.com/package/jinang)
 
-
 >	Other Languages / 敬请等待 / 敬請等待  
 >	If links in this document not avaiable, please access [README on GitHub](https://github.com/YounGoat/jinang/blob/master/README.md) directly.
 
@@ -22,14 +21,13 @@ __jinang__ is an incubator. Successful sub modules may be encouraged to be publi
 Here is its pedigree.  
 ![jinang.pedigree](./docs/assets/jinang.pedigree.png)
 
-##	Table of contents
+##  Table of Contents
 
-*	[Get Started](#get-started)
-*	[API](#api)
-*	[Why jinang](#why-jinang)
-*	[References](#references)
-*	[CHANGE LOG](./CHANGELOG.md)
-*	[Homepage](https://github.com/YounGoat/jinang)
+* [Get Started](#get-started)
+* [API](#api)
+* [Why *jinang*](#why-jinang)
+* [The Incubated](#the-incubated)
+* [Links](#links)
 
 ##	Get Started
 
@@ -98,6 +96,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Make current process to "sleep" for a while.
 *   [sogo](./docs/sogo.md) :
     To set something into object, or get something from object.
+*   [sort](./docs/sort.md) :
+    Sort an array.
 *   [split](./docs/split.md) :
     Split string in different ways.
 *   [table](./docs/table.md) :
@@ -115,7 +115,14 @@ __jinang__ is an incubator for creatives which will make programming with Node.j
 
 Only mini modules without any dependencies may be put into __jinang__. Although every module is small enough, they all will be maintained carefully and seriously.
 
-##  Recommendations
+##  The Incubated
 
-*   [shadowing](https://www.npmjs.com/package/shadowing)
-    Keywords: deep-equal
+*   [piui](https://www.npmjs.com/package/piui)  
+    from [table](./docs/table.md)
+*   [undertake](https://www.npmjs.com/package/undertake)  
+    from [co](./docs/co.md), [isGenerator](./docs/isGenerator.md) and [isGeneratorFunction](./docs/isGeneratorFunction.md)
+
+##  Links
+
+*	[CHANGE LOG](./CHANGELOG.md)
+*	[Homepage](https://github.com/YounGoat/jinang)

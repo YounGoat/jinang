@@ -61,7 +61,7 @@ co(success).then(ret => {
 
 For `co`, operator `yield` expects a *promise*, *generator function* or *thunkify function*. If something following `yield` is not expected, an error will be thrown.
 
-For `co.easy`, anything is allowed to follow `yield` operator. If it is not instance of `Promise` or `Function`, itself will be returned by `yield`. E.g.
+For `co.easy`, anything is allowed to follow `yield` operator. If it is not an instance of `Promise` or `Function`, itself will be returned by `yield`. E.g.
 
 ```javascript
 const co = require('jinang/co');
