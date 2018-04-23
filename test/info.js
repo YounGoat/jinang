@@ -29,4 +29,8 @@ describe('inof (forInObject)', () => {
         });
         assert.equal(i, 2);
     });
+
+    it('ignore null object (no throwing)', () => {
+        inof(null, () => {});
+    });
 });

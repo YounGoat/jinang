@@ -84,4 +84,9 @@ describe('cloneObject', () => {
         assert( copy.hasOwnProperty('gender'));
         assert(!copy.hasOwnProperty('name'));
     });
+
+    it('ignore null object (no throwing)', () => {
+        let copy = cloneObject(null, []); 
+        assert.deepEqual({}, copy);
+    });
 });

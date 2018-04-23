@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.21.0] - Apr 23rd, 2018
+
+*   __[jinang/forInObject](./docs/forInObject.md)__ / __[jinang/inof](./docs/inof.md)__ will depress exception while `null` is passed in.
+*   __[jinang/JsonFile](./docs/JsonFile.md)__ will depress exception while the file is empty.
+
 ##  [0.20.0] - Apr 9th, 2018
 
 *   __[jinang/write](./docs/write.md)__ added.

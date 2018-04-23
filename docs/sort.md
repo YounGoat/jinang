@@ -26,7 +26,7 @@ sort(persons, 'age');
 *options* looks like:
 ```javascript
 {
-    sparser, /* string OPTIONAL */
+    parser, /* string | Function OPTIONAL */
     lock, /* boolean DEFAULT false */
 }
 ```

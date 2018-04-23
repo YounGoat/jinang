@@ -23,7 +23,8 @@ function JsonFile(pathname, options) {
     this.options = Object.assign({}, options);
 
     if (fs.existsSync(pathname)) {
-        this.json = JSON.parse(fs.readFileSync(pathname));        
+        let json = fs.readFileSync(pathname);
+        this.json = json.length > 0 ? JSON.parse(json) : {};
     }
     else {
         this.json = {};
