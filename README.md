@@ -106,6 +106,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Wrapper of a .txt file.
 *   [unescaping](./docs/unescaping.md) :
     A tiny and flexible template render.
+*   [uniq](./docs/uniq.md) :
+    Compare sibling items in an array and ignore the replications.
 *   [write](./docs/write.md) :
     Write into a file. If file not exists, create it.
 

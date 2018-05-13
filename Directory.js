@@ -101,7 +101,9 @@ Directory.prototype.rmfr = function(name) {
 };
 
 Directory.prototype.write = function(name, data) {
-    fs.writeFileSync(this.resolve(name), data);
+    let realpath = this.resolve(name);
+    mkdirp(path.dirname(realpath));
+    fs.writeFileSync(realpath, data);
     return;
 };
 
