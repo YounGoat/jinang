@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.23.0] - Jan 28th, 2019
+
+*   __[jinang/bufferReplace](./docs/bufferReplace.md)__ added.
+*   __[jinang/trim](./docs/trim.md)__ added.
+
 ##  [0.22.0] - May 13th, 2018
 
 Developed on Apr 24th, 2018.

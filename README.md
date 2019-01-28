@@ -1,6 +1,8 @@
 #	jinang
 __Collection of Node.js / ECMAScript Mini Modules__
 
+[![coverage status of github.com/YounGoat/jinang](https://coveralls.io/repos/github/YounGoat/jinang/badge.svg?branch=master)](https://coveralls.io/github/YounGoat/jinang2?branch=master)
+
 [![coverage status of github.com/YounGoat/jinang](https://img.shields.io/coveralls/YounGoat/jinang/master.svg)](https://coveralls.io/github/YounGoat/jinang2?branch=master)
 [![build status of github.com/YounGoat/jinang](https://travis-ci.org/YounGoat/jinang.svg?branch=master)](https://travis-ci.org/YounGoat/jinang)
 [![total downloads of jinang](https://img.shields.io/npm/dt/jinang.svg)](https://www.npmjs.com/package/jinang)
@@ -58,6 +60,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     A wrapper of generator function.
 *   [currying](./docs/currying.md) :
     Make function curried.
+*   [bufferReplace](./docs/bufferReplace.md):
+    Return a new buffer with all matches replaced.
 *   [defineError](./docs/defineError.md) :
     Create customised Error class.
 *   [Directory](./docs/Directory.md) :
@@ -102,6 +106,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Split string in different ways.
 *   [table](./docs/table.md) :
     Create a printable table or print a table directly in console. 
+*   [trim](./docs/trim.md) :
+    Trim everything.
 *   [TxtFile](./docs/TxtFile.md) :
     Wrapper of a .txt file.
 *   [unescaping](./docs/unescaping.md) :
