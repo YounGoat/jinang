@@ -94,6 +94,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Progress simulator.
 *   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md) :
     Avoid console warning when no cather defined.
+*   [promisible](./docs/promisible.md) :  
+    Something like `util.promisify()` but the common error-first callback mode still available.
 *   [safeClone](./docs/safeClone.md) :
     A deep and partial clone method.
 *   [sleep](./docs/sleep.md) :
