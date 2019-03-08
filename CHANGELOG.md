@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##	[0.25.0] - Mar 9th, 2019
+
+*	__[jinang/readable2buffer](./docs/readable2buffer.md)__ added.
+
 ##	[0.24.0] - Feb 28th, 2019
 
 *	__[jinang/promisible](./docs/promisible.md)__ added.

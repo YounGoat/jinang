@@ -29,7 +29,11 @@ Here is its pedigree.
 * [API](#api)
 * [Why *jinang*](#why-jinang)
 * [The Incubated](#the-incubated)
-* [Links](#links)
+
+##  Links
+
+*	[CHANGE LOG](./CHANGELOG.md)
+*	[Homepage](https://github.com/YounGoat/jinang)
 
 ##	Get Started
 
@@ -84,6 +88,8 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Acquire the ordinal form of a natural number.
 *   [ott](./docs/ott.md) :
     Wrap a function to allow it invoked only once, twice or thrice.
+*   [readable2buffer](./docs/readable2buffer.md) :
+    Read a stream and callback with a buffer.
 *   [papply](./docs/papply.md) :
     Partial application of a function.
 *   [parseOptions](./docs/parseOptions.md) :
@@ -94,7 +100,7 @@ For your convenience, avaiable modules included in *jinang* are listed here (alp
     Progress simulator.
 *   [promiseRejectionAutoHandle](./docs/promiseRejectionAutoHandle.md) :
     Avoid console warning when no cather defined.
-*   [promisible](./docs/promisible.md) :  
+*   [promisible](./docs/promisible.md) :
     Something like `util.promisify()` but the common error-first callback mode still available.
 *   [safeClone](./docs/safeClone.md) :
     A deep and partial clone method.
@@ -131,8 +137,3 @@ Only mini modules without any dependencies may be put into __jinang__. Although 
     from [table](./docs/table.md)
 *   [undertake](https://www.npmjs.com/package/undertake)  
     from [co](./docs/co.md), [isGenerator](./docs/isGenerator.md) and [isGeneratorFunction](./docs/isGeneratorFunction.md)
-
-##  Links
-
-*	[CHANGE LOG](./CHANGELOG.md)
-*	[Homepage](https://github.com/YounGoat/jinang)
