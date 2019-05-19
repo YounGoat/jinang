@@ -43,6 +43,16 @@ describe('Progress', () => {
         progress.raise(99);
     });
 
+    it('method .toPromise().then', (done) => {
+        progress.toPromise().then(done);
+        progress.emit('end');
+    });
+
+    it('method .toPromise().catch', (done) => {
+        progress.toPromise().catch(done);
+        progress.emit('error');
+    });
+
     [
         [ 'abort'     , Progress.SIGABRT ],
         [ 'hangup'    , Progress.SIGHUP  ],

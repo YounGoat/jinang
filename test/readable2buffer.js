@@ -12,7 +12,7 @@ const MODULE_REQUIRE = 1
     , readable2buffer = noda.inRequire('readable2buffer')
     ;
 
-describe.only('readable2buffer', () => {
+describe('readable2buffer', () => {
 
     it('traditional style', (done) => {
         /**

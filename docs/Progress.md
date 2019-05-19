@@ -41,3 +41,6 @@ progress.abort();
     Send signal SIGQUIT to progress and emit a *signal* event.
 *   void __\<instance\>.terminate__()  
     Send signal SIGTERM to progress and emit a *signal* event.
+
+*   Promise __\<instance\>.toPromise__()  
+*   void __\<instance\>.final__(Function *callback*)

@@ -61,6 +61,22 @@ Progress.prototype.terminate = function() {
 	this.emit('signal', SIGTERM);
 };
 
+Progress.prototype.toPromise = function() {
+	return new Promise((resolve, reject) => {
+		this.on('error', reject);
+		this.on('end', resolve);
+	});
+};
+
+Progress.prototype.final = function(callback) {
+	this.on('error', callback);
+	this.on('end', function() {
+		let args = Array.from(arguments);
+		args.unshift(null);
+		callback.apply(null, args);
+	});
+};
+
 Object.assign(Progress, {
 	SIGABRT,
 	SIGHUP,
