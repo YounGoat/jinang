@@ -20,7 +20,12 @@ function defineError(name, parent, constructorFunction) {
 		/* eslint-disable new-cap */
 		var err = new parent;
 		/* eslint-enable new-cap */
-		this.stack = [ this.name + ': ' + this.message ].concat(err.stack.split('\n').slice(2)).join('\n');
+		
+		var stack = [ this.name + ': ' + this.message ].concat(err.stack.split('\n').slice(2)).join('\n');
+		Object.defineProperty(this, 'stack', {
+			enumerable: false,
+			value: stack, 
+		});
 	};
 
 	Ex.prototype = Object.create(parent.prototype);

@@ -2,6 +2,10 @@
 
 Notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
 
+##  [0.26.1] - Jan 5th, 2020
+
+*   __[jinang/defineError](./docs/defineError.md)__ set `.stack` property unenumerable.
+
 ##  [0.26.0] - May 19th, 2019
 
 *	__[jinang/Progress](./docs/Progress.md)__ updated with `toPromise()` and `.final()` added.
