@@ -25,10 +25,10 @@ const MODULE_REQUIRE = 1
     }
     ;
 /**
- * @param  {string} s
- * @param  {string|string[]} seperator
- * @param  {string|RegExp} delimiter
- * @param  {string} escaper
+ * @param  {string}          s
+ * @param  {string|RegExp}   seperator
+ * @param  {string|string[]} delimiter
+ * @param  {string}          escaper
  */
 function split(
 	/*String*/ s,

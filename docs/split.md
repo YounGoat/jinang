@@ -3,7 +3,7 @@
 Split string in different ways.
 
 *   Array __split__(string *s*, string | RegExp *seperator*)  
-    The first parameter is the string to be split.  
+    The first parameter is the string to be split.  
     *seperator* may be a string or a regular expression object.
 
 *   Array __split__(string *s*, string | RegExp *seperator*, string | Array *delimiter*)  

@@ -21,7 +21,7 @@ The name *jinang* is abbreviation of "Jin-Nang", which in Chinese means a magic 
 __jinang__ is an incubator. Successful sub modules may be encouraged to be published as independent NPM packages.
 
 Here is its pedigree.  
-![jinang.pedigree](./docs/assets/jinang.pedigree.png)
+[![jinang.pedigree](./docs/assets/jinang.pedigree.png)](#api)
 
 ##  Table of Contents
 
